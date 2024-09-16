@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/index.css" /> -->
+    <!-- <link rel="stylesheet" href="assets/css/interest.css" /> -->
+    <link rel="stylesheet" href="assets/css/achievement.css" />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <title>Interest</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- NAVBAR -->
+      <nav class="nav">
+        <button class="toggle-btn" id="toggleSidebar" onclick="">
+          <span><i data-feather="menu"></i></span>
+        </button>
+        <div class="nav-logo" id="nav-logo">
+          <a href="" class="nav-logo-header">Thukten Norbu</a>
+        </div>
+        <div class="nav-icons"></div>
+        <div class="nav-menu" id="nav-menu">
+          <ul>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="interest.html" class="nav-link">Interest</a>
+            </li>
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link">Achievements</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <a href="" class="side-logo-header" id="sidebar-logo">Menu</a>
+
+          <button class="closeSide" id="closeSide" onclick="">
+            <i data-feather="x" class="iconX"></i>
+          </button>
+        </div>
+        <div class="menu">
+          <ul>
+            <div class="side-item">
+              <li class="nav-item"><a href="index.html" class="nav-item">Home</a></li>
+            </div>
+            <div class="side-item">
+              <li class="nav-item"><a href="interest.html" class="nav-item">Interest</a></li>
+            </div>
+            <div class="side-item">
+              <li class="nav-item"><a href="achievements.html" class="nav-item">Achievement</a></li>
+            </div>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- END NAVBAR -->
+
+      <div class="main">
+        <div class="banner">
+          <div class="bannerContent"></div>
+        </div>
+
+        <div class="space"></div>
+        
+
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/coBa.jpg" alt="" srcset="" />
+              </div>
+              <div class="card-title">
+                <h1 class="card-title">Bhutan Coding Bootcamp</h1>
+              </div>
+              <div class="cardtext">
+                <p class="card-para">
+                  Completion of this bootcamp help me get basics to how many
+                  applications work
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 card">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/gcit.jpg"/>
+              </div>
+              <div class="card-title">
+                <h1 class="card-title">
+                  Getting Into GCIT
+                </h1>
+              </div>
+              <div class="cardtext">
+                <p class="card-para">Following my hobby to code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="footer">
+      <div class="container">
+        <h2>
+          Get in touch at
+          <a href="mailto:12240095.gcit@rub.edu.bt">12240095.gcit@rub.edu.bt</a>
+        </h2>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("toggleSidebar");
+
+    const cbtn = document.getElementById("closeSide");
+    const sidebar = document.getElementById("sidebar");
+
+    btn.addEventListener("click", () => {
+      sidebar.classList.add("active");
+    });
+
+    cbtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+
+  <script>
+    feather.replace();
+  </script>
+</html>

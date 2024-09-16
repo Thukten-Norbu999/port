@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #dbf9ee;
+    --main-font: "Roboto";
+    --font-size-base: 16px;
+    --font-size-large: 24px;
+    --font-size-small: 12px;
+    --spacing-unit: 10px;
+}
+
+*{
+    font-family: var(--main-font),sans-serif;
+}
+
+
+.nav{
+    position: fixed;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: whitesmoke;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-menu{
+    float: inline-end;
+}
+.nav-menu ul{
+    display: flex;
+    
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 10px;
+
+}
+
+
+
+.nav-item, .nav-toggle{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-logo-header, .side-logo-header{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+.nav-logo{
+    align-items: center;
+    padding: 10px;
+
+}
+
+.side-item .nav-item,
+.side-item .nav-item .nav-link{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
+
+.side-item{
+    margin-top: 10%;
+}
+
+/* .nav-logo.hidden{
+    color: white;
+} */
+
+.sidebar{
+    display: none;
+    position: fixed;
+    left: 0px; 
+    transition: left 0.3s ease-in-out;
+    overflow: hidden;
+scroll-behavior: none;
+    width: 50%;
+    height: 100vh;
+    z-index: 10;
+    background-color: whitesmoke;
+}
+
+.sidebar-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iconX{
+    float: right;
+}
+
+.sidebar.active{
+    display: block;
+}
+.toggle-btn{
+    display: none;
+    background: transparent;
+    border: none;
+}
+
+.closeSide{
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    
+
+    .sidebar.active {
+        
+    }
+
+    .toggle-btn{
+        display: block;
+    }
+  
+    .nav-menu .nav-item{
+        display: none;
+    }
+}
